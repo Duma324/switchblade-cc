@@ -1,24 +1,24 @@
 <?php
 
-// Switchblade CC Checker - Developed from 1 August 2021 by @rizzyneck
+// Switchblade CC Checker - Developed from 1 August 2021 by 
 // Base from Andrymata - Made with ❤
 // Last updated 18 September 2021
 // Webhook: https://api.telegram.org/bot<token>/setwebhook?url=<url>
 
 // BOT API Configuration
-$botToken = "TOKEN"; #<------------------- PUT YOUR TOKEN HERE------------->#
+$botToken = "TOKEN"; #<5469250077:AAFTQrPZt5OltKLjnawBDbl6aWNtaMKrCZc#
 $website = "https://api.telegram.org/bot".$botToken;
 error_reporting(0);
 $update = file_get_contents('php://input');
 $update = json_decode($update, TRUE);
 $print = print_r($update);
-$chatId = $update["message"]["chat"]["id"];
+$chatId = $update["message"]["chat"]["1012208565"];
 $gId = $update["message"]["from"]["id"];
 $userId = $update["message"]["from"]["id"];
 $firstname = $update["message"]["from"]["first_name"];
 $username = $update["message"]["from"]["username"];
 $message = $update["message"]["text"];
-$message_id = $update["message"]["message_id"];
+$message_id = $update["message"]["1012208565"];
 
 // Start Commands
 if ((strpos($message, "/start") === 0)||(strpos($message, "/start") === 0)){
